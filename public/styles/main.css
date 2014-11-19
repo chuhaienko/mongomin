@@ -1,0 +1,31 @@
+a {
+	color: lightseagreen;
+}
+a:hover {
+	color: lawngreen;
+}
+
+body {
+	width: 1000px;
+	margin: 20px auto;
+}
+
+#menu, #error {
+	border-radius: 10px;
+	padding: 10px;
+	margin: 10px 0;
+}
+#menu {
+	border: 2px solid green;
+}
+#menu ul {
+	list-style: none;
+}
+#menu ul li {
+	display: inline-block;
+}
+
+#error {
+	border: 1px solid red;
+	background: lightpink;
+}

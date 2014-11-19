@@ -1,0 +1,22 @@
+{% extends 'template.html' %}
+
+{% block title %}
+	Mongo-min: collections
+{% endblock %}
+
+{% block body %}
+	<div>Collections of {{ dbName }}:</div>
+	{% if collections %}
+		<ul>
+		{% for collection in collections %}
+			<li>
+				<a href="/{{ dbName	}}/{{ collection }}">
+					{{ collection }}
+				</a>
+			</li>
+		{% endfor %}
+		</ul>
+	{% else %}
+		No collections
+	{% endif %}
+{% endblock %}

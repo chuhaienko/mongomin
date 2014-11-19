@@ -1,0 +1,20 @@
+{% extends 'template.html' %}
+
+{% block title %}
+	Mongo-min: collections
+{% endblock %}
+
+{% block body %}
+	<div>Documents of {{ dbName }}.{{ collectName }}</div>
+	{% if docs %}
+		<ul>
+		{% for doc in docs %}
+			<li>
+				{{ doc|json }}
+			</li>
+		{% endfor %}
+		</ul>
+	{% else %}
+		No documents
+	{% endif %}
+{% endblock %}

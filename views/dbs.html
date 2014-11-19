@@ -1,0 +1,27 @@
+{% extends 'template.html' %}
+
+{% block title %}
+	Mongo-min: dbs
+{% endblock %}
+
+{% block body %}
+	<div>Databases:</div>
+	{% if data %}
+		<ul>
+		{% for db in data.databases %}
+			<li>
+				{% if !db.empty %}
+				<a href="/{{ db.name }}">
+				{% endif %}
+					{{ db.name }} ({{ db.sizeOnDisk }})
+				{% if !db.empty %}
+				</a>
+				{% endif %}
+			</li>
+		{% endfor %}
+		</ul>
+		Total size: {{ data.totalSize }}
+	{% else %}
+		No databases
+	{% endif %}
+{% endblock %}
