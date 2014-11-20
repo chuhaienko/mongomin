@@ -6,21 +6,21 @@
 
 {% block body %}
 	<div>Databases:</div>
-	{% if data %}
+	{% if dbs %}
 		<ul>
-		{% for db in data.databases %}
+		{% for db in dbs.databases %}
 			<li>
 				{% if !db.empty %}
-				<a href="/{{ db.name }}">
+				<a href="/{{ db.name }}" title="{{ db.sizeOnDisk|dataFormat }}">
 				{% endif %}
-					{{ db.name }} ({{ db.sizeOnDisk }})
+					{{ db.name }} ({{ db.colls }})
 				{% if !db.empty %}
 				</a>
 				{% endif %}
 			</li>
 		{% endfor %}
 		</ul>
-		Total size: {{ data.totalSize }}
+		Total size: {{ dbs.totalSize|dataFormat }}
 	{% else %}
 		No databases
 	{% endif %}

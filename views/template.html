@@ -13,13 +13,21 @@
 		{% endblock %}
 	</head>
 	<body>
-		<div id="menu">
-			{% block menu %}
+		<div id="mainmenu">
+			{% block mainmenu %}
 				<ul>
 					<li><a href="/">Index</a></li>
 				</ul>
 			{% endblock %}
 		</div>
+		<div id="menu">
+			{% block menu %}
+				<ul>
+					
+				</ul>
+			{% endblock %}
+		</div>
+
 		{% if err %}
 			<div id="error">
 				{{ err.message }}

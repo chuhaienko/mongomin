@@ -1,5 +1,6 @@
 var util = require('util');
 var swig = require('swig');
+var swigExt = new require('./lib/SwigExt.js')(swig);
 var bodyParser = require('body-parser');
 var express = require('express');
 var load = require('express-load');

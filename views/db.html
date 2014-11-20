@@ -10,8 +10,8 @@
 		<ul>
 		{% for collection in collections %}
 			<li>
-				<a href="/{{ dbName	}}/{{ collection }}">
-					{{ collection }}
+				<a href="/{{ dbName	}}/{{ collection.name }}">
+					{{ collection.name }} ({{ collection.docs }})
 				</a>
 			</li>
 		{% endfor %}
